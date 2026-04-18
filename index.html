@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Skills Guide — Comprehensive Review & Collection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #f5f7f9 0%, #ffffff 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #30A8DA 0%, #1A7FAD 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+
+        .header-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 0.95em;
+            flex-wrap: wrap;
+        }
+
+        main {
+            padding: 60px 40px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            color: #0D2D5E;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #C9A84C;
+            display: inline-block;
+        }
+
+        h3 {
+            color: #30A8DA;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+            color: #333;
+        }
+
+        .intro-box {
+            background: #F5F7F9;
+            border-left: 4px solid #30A8DA;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            font-style: italic;
+            color: #555;
+        }
+
+        .skill-card {
+            background: #F9FAFB;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover {
+            box-shadow: 0 8px 16px rgba(48, 168, 218, 0.15);
+            border-color: #30A8DA;
+        }
+
+        .skill-card strong {
+            color: #0D2D5E;
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .skill-card em {
+            color: #666;
+            font-style: italic;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+
+        .skill-card p {
+            margin: 0;
+            color: #555;
+            font-size: 0.95em;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        thead {
+            background: #30A8DA;
+            color: white;
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #1A7FAD;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #F5F7F9;
+        }
+
+        tbody tr:hover {
+            background: #EEFBFF;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #D6EFFA;
+            color: #1A7FAD;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .category-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .category-list li {
+            padding-left: 25px;
+            margin-bottom: 10px;
+            position: relative;
+            color: #555;
+        }
+
+        .category-list li:before {
+            content: "•";
+            color: #30A8DA;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+
+        .recommendation {
+            background: linear-gradient(135deg, #D6EFFA 0%, #E8EEF6 100%);
+            border-left: 4px solid #C9A84C;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .recommendation h4 {
+            color: #0D2D5E;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+        }
+
+        .recommendation ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .recommendation li {
+            padding-left: 25px;
+            margin-bottom: 8px;
+            position: relative;
+            color: #333;
+        }
+
+        .recommendation li:before {
+            content: "✓";
+            color: #10b981;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .highlight {
+            background: #FFFACD;
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #0D2D5E;
+            font-weight: 600;
+        }
+
+        code {
+            background: #F5F7F9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #C7254E;
+            font-size: 0.9em;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #0D2D5E 0%, #1B4C96 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cta-box h3 {
+            color: #C9A84C;
+            margin-top: 0;
+        }
+
+        .cta-box p {
+            color: #E8EEF6;
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #999;
+            text-align: center;
+            padding: 30px 40px;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #30A8DA;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .pdf-download {
+            display: inline-block;
+            background: #30A8DA;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .pdf-download:hover {
+            background: #1A7FAD;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(48, 168, 218, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            main {
+                padding: 40px 20px;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            .header-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            table {
+                font-size: 0.85em;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #30A8DA;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+        }
+
+        .scroll-to-top:hover {
+            background: #1A7FAD;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Claude Skills Guide</h1>
+            <p>A Comprehensive Review & Collection for Builders, Developers & Finance Professionals</p>
+            <div class="header-meta">
+                <span>📚 800,000+ Skills</span>
+                <span>🏗️ Construction-Focused</span>
+                <span>💻 Development Stack</span>
+                <span>📊 Finance & Trading</span>
+            </div>
+        </header>
+
+        <main>
+            <!-- Introduction Section -->
+            <section id="intro">
+                <h2>What Are Claude Skills?</h2>
+                <div class="intro-box">
+                    <strong>Definition:</strong> Claude Skills are modular instruction packages that teach Claude how to perform specialized tasks repeatedly and at scale. 
+                    They consist of a SKILL.md file with instructions, plus optional references and scripts. Skills are accessible across Claude.ai, Claude Code, and the Claude API.
+                </div>
+                <p>
+                    This guide reviews the ecosystem of 800,000+ available skills and recommends the most relevant ones for your profile: 
+                    construction companies (Sharp Line Construction, Oak Leaf Building Projects), web/app development (React, Vue, Supabase), 
+                    and finance/trading applications.
+                </p>
+            </section>
+
+            <!-- Official Repositories -->
+            <section id="official">
+                <h2>1. Official Repositories</h2>
+                <div class="intro-box">
+                    Anthropic's official skills are vetted, maintained, and guaranteed to work across all Claude platforms.
+                </div>
+
+                <div class="skill-card">
+                    <strong>anthropics/skills</strong>
+                    <em>GitHub: github.com/anthropics/skills</em>
+                    <p>
+                        The official Anthropic repository with foundational skills. Includes source code for <code>docx</code>, <code>pdf</code>, <code>pptx</code>, and <code>xlsx</code>—
+                        production-grade document tools. Install via: <code>/plugin marketplace add anthropics/skills</code>
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <strong>Installation via Claude Code</strong>
+                    <em>Command-line integration</em>
+                    <p>
+                        <code>/plugin marketplace add anthropics/skills</code> — One command loads all official Anthropic skills. 
+                        They are automatically available in every Claude Code session.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Marketplace & Discovery -->
+            <section id="marketplace">
+                <h2>2. Marketplace & Discovery</h2>
+                <div class="intro-box">
+                    Centralized platforms for discovering and evaluating community skills. Useful for browsing by category and comparing implementations.
+                </div>
+
+                <div class="skill-card">
+                    <strong>SkillsMP</strong>
+                    <em>URL: skillsmp.com | Coverage: 800,000+ skills</em>
+                    <p>
+                        The largest aggregator of Claude Skills. Features filters by profession, author, and popularity (minimum 2-star quality gate). 
+                        Best for broad searches and discovering niche skills. Simple interface, fast discovery.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Curated Collections -->
+            <section id="curated">
+                <h2>3. Curated Collections (GitHub)</h2>
+                <div class="intro-box">
+                    Hand-picked skill repositories maintained by the community. These offer higher quality and more coherent organization than raw marketplace searches.
+                </div>
+
+                <div class="skill-card">
+                    <strong>VoltAgent/awesome-agent-skills</strong>
+                    <span class="badge">⭐ 22,000+</span>
+                    <em>GitHub: github.com/VoltAgent/awesome-agent-skills</em>
+                    <p>
+                        <strong>Focus:</strong> 1,000+ skills from official teams (Anthropic, Google Labs, Vercel, Stripe, Cloudflare, Netlify, Sentry, Figma) plus community.<br/>
+                        <strong>Best for:</strong> Enterprise-grade skills, infrastructure, fintech, serverless, and advanced integrations.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <strong>travisvn/awesome-claude-skills</strong>
+                    <span class="badge">⭐ High</span>
+                    <em>GitHub: github.com/travisvn/awesome-claude-skills</em>
+                    <p>
+                        <strong>Focus:</strong> Well-organized curated list with detailed descriptions and categories.<br/>
+                        <strong>Best for:</strong> Quick orientation, browsing by topic, understanding skill ecosystem structure.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <strong>ComposioHQ/awesome-claude-skills</strong>
+                    <span class="badge">⭐ High</span>
+                    <em>GitHub: github.com/ComposioHQ/awesome-claude-skills</em>
+                    <p>
+                        <strong>Focus:</strong> Integration-focused skills (email, Slack, GitHub, Notion, 1000+ services via Composio MCP).<br/>
+                        <strong>Best for:</strong> Action-taking skills, workflow automation, connecting Claude to external tools.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <strong>BehiSecc/awesome-claude-skills</strong>
+                    <span class="badge">⭐ Medium</span>
+                    <em>GitHub: github.com/BehiSecc/awesome-claude-skills</em>
+                    <p>
+                        <strong>Focus:</strong> Broad coverage including testing, design, web performance, and DevOps.<br/>
+                        <strong>Best for:</strong> QA engineers, DevOps specialists, frontend performance optimization.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <strong>abubakarsiddik31/claude-skills-collection</strong>
+                    <span class="badge">⭐ Medium</span>
+                    <em>GitHub: github.com/abubakarsiddik31/claude-skills-collection</em>
+                    <p>
+                        <strong>Focus:</strong> Blend of official and community skills with validation tooling.<br/>
+                        <strong>Best for:</strong> Skill development, CI/CD integration, skill quality verification.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Large Collections -->
+            <section id="large-collections">
+                <h2>4. Large Individual Collections</h2>
+                <div class="intro-box">
+                    Single-author or team-maintained repositories with 20-235+ skills. Often specialized, well-documented, and battle-tested in production.
+                </div>
+
+                <div class="skill-card">
+                    <strong>alirezarezvani/claude-skills</strong>
+                    <span class="badge">235+ skills</span>
+                    <span class="badge">⭐ 5,200+</span>
+                    <em>GitHub: github.com/alirezarezvani/claude-skills</em>
+                    <p>
+                        <strong>Coverage:</strong> Engineering, DevOps, marketing, compliance, C-level, 30+ frameworks.<br/>
+                        <strong>Best for:</strong> Full-stack teams, production-grade deployments, comprehensive skill library.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <strong>obra/superpowers</strong>
+                    <span class="badge">20+ core skills</span>
+                    <span class="badge">⭐ 1,000+</span>
+                    <em>GitHub: github.com/obra/superpowers</em>
+                    <p>
+                        <strong>Coverage:</strong> TDD, debugging, planning, multi-agent patterns, collaboration.<br/>
+                        <strong>Best for:</strong> Claude Code users, collaborative development workflows, quality assurance.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <strong>secondsky/claude-skills</strong>
+                    <span class="badge">170 skills</span>
+                    <span class="badge">⭐ 800+</span>
+                    <em>GitHub: github.com/secondsky/claude-skills</em>
+                    <p>
+                        <strong>Coverage:</strong> Cloudflare, React, Tailwind v4, Supabase, AI integrations, Next.js, Vue, NestJS.<br/>
+                        <strong>Best for:</strong> Your exact stack (React/Vite/Supabase). Most directly applicable to BuildBill Pro, SnapSnag, ExamMemory.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Recommended for Your Profile -->
+            <section id="recommendations">
+                <h2>5. Recommended Skills for Your Profile</h2>
+                <p>
+                    Based on your background (construction + development + finance), install these <span class="highlight">highest-ROI skills first</span>:
+                </p>
+
+                <div class="recommendation">
+                    <h4>🏗️ Construction & Estimation</h4>
+                    <ul>
+                        <li><strong>london-materials.skill</strong> (custom) — Material specs, supplier database, London pricing</li>
+                        <li><strong>london-garden-plan.skill</strong> (custom) — Garden design, planting, maintenance schedules</li>
+                        <li><strong>construction-estimating</strong> (search SkillsMP) — Cost models, labour rates, bidding</li>
+                    </ul>
+                </div>
+
+                <div class="recommendation">
+                    <h4>💻 Web Development</h4>
+                    <ul>
+                        <li><strong>modern-web-design.skill</strong> (custom) — React/Vue, design systems, Tailwind v4, shadcn/ui, accessibility</li>
+                        <li><strong>secondsky/claude-skills</strong> — 170 production skills (Supabase, Vercel, Next.js, your stack)</li>
+                        <li><strong>VoltAgent/awesome-agent-skills</strong> — Enterprise patterns (Stripe, Cloudflare, DevOps)</li>
+                        <li><strong>frontend-design</strong> (official) — Modern aesthetics, avoid "AI slop"</li>
+                    </ul>
+                </div>
+
+                <div class="recommendation">
+                    <h4>💰 Finance & Trading</h4>
+                    <ul>
+                        <li><strong>Bigdata.com</strong> (via SkillsMP) — Financial documents, earnings calls, sentiment analysis</li>
+                        <li><strong>aws-skills</strong> — Cost optimization, serverless (if using AWS for trading platform)</li>
+                        <li><strong>uk-accountancy.skill</strong> (custom) — VAT, CIS, bookkeeping, tax compliance</li>
+                    </ul>
+                </div>
+
+                <div class="recommendation">
+                    <h4>📄 Document & Brand</h4>
+                    <ul>
+                        <li><strong>slc-documents.skill</strong> (custom) — SLC invoices, estimates, branded specifications</li>
+                        <li><strong>oakleaf-documents.skill</strong> (custom) — Oak Leaf premium documents, proposals</li>
+                        <li><strong>docx, pdf, pptx, xlsx</strong> (official Anthropic) — Document manipulation foundation</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Comparison Table -->
+            <section id="comparison">
+                <h2>6. Quick Comparison: Where to Find Skills</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Source</th>
+                                <th>Count</th>
+                                <th>Quality Gate</th>
+                                <th>Best For</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>SkillsMP</strong></td>
+                                <td>800k+</td>
+                                <td>Min 2★</td>
+                                <td>Broad search, niche skills</td>
+                            </tr>
+                            <tr>
+                                <td><strong>VoltAgent</strong></td>
+                                <td>1000+</td>
+                                <td>Official teams</td>
+                                <td>Enterprise-grade</td>
+                            </tr>
+                            <tr>
+                                <td><strong>travisvn</strong></td>
+                                <td>500+</td>
+                                <td>Hand-picked</td>
+                                <td>Quick start, orientation</td>
+                            </tr>
+                            <tr>
+                                <td><strong>alirezarezvani</strong></td>
+                                <td>235</td>
+                                <td>Production</td>
+                                <td>Full-stack teams</td>
+                            </tr>
+                            <tr>
+                                <td><strong>secondsky</strong></td>
+                                <td>170</td>
+                                <td>Team-vetted</td>
+                                <td>Your stack (React/Vue/Supabase)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>anthropics/skills</strong></td>
+                                <td>50+</td>
+                                <td>Official</td>
+                                <td>Core tools, stability</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Installation & Safety -->
+            <section id="installation">
+                <h2>7. Installation & Safety</h2>
+
+                <h3>Via Claude Code</h3>
+                <p>
+                    <code>/plugin marketplace add anthropics/skills</code> — Load official skills<br/>
+                    <code>/plugin marketplace add secondsky/claude-skills</code> — Load production collection<br/>
+                    <code>/plugin install frontend-design</code> — Install specific skill
+                </p>
+
+                <h3>Via claude.ai Settings</h3>
+                <p>
+                    Settings → Capabilities → Skills → Upload skill → Select <code>.skill</code> file → Install
+                </p>
+
+                <h3>Safety Guidelines</h3>
+                <ul class="category-list">
+                    <li>Skills can execute arbitrary code — only install from <strong>trusted sources</strong></li>
+                    <li>Review <code>SKILL.md</code> before installation (check description, requirements, examples)</li>
+                    <li>Start with official (Anthropic) and top-starred community skills</li>
+                    <li>Test in non-production environment first</li>
+                    <li>Monitor logs for unexpected behaviour</li>
+                    <li><strong>Never share API keys or credentials in skills</strong> — use environment variables</li>
+                </ul>
+            </section>
+
+            <!-- Custom Skills -->
+            <section id="custom-skills">
+                <h2>8. Your Custom Skills (Ready to Install)</h2>
+                <p>
+                    You've already built three custom skills tailored to your business. All are validated, packaged, and production-ready:
+                </p>
+
+                <div class="skill-card">
+                    <strong>modern-web-design.skill</strong>
+                    <em>29 KB | 8 references | 2,500+ lines</em>
+                    <p>
+                        <strong>Includes:</strong> React/Vue architecture, three design systems (minimalist, bold brand-forward, dark fintech), 
+                        shadcn/ui patterns, Tailwind v4, forms + validation, accessibility (WCAG 2.1 AA), Core Web Vitals, deployment (Vercel/Hostinger), 
+                        SLC/Oak Leaf brand components.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <strong>london-materials.skill</strong>
+                    <em>21 KB | 8 references | 600+ lines</em>
+                    <p>
+                        <strong>Includes:</strong> Sanitary ware, tiles/stone, kitchens, flooring, paints, lighting, joinery, building materials. 
+                        Trade/Premium/Online/Bespoke supplier tiers. London pricing Q2 2026. Reverse-charge VAT for Oak Leaf B2B. 
+                        Hooks to branded document skills.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <strong>london-garden-plan.skill</strong>
+                    <em>28 KB | 7 references | 900+ lines</em>
+                    <p>
+                        <strong>Includes:</strong> Planting (RHS-approved species, flowering calendar, London Clay-tolerant), hardscape 
+                        (paving, decking, pergolas), lawn + drainage (5 strategies), garden lighting (4-layer system), water features, 
+                        outdoor kitchens/BBQ, maintenance schedules. London-specific soil/climate guidance.
+                    </p>
+                </div>
+
+                <p style="margin-top: 20px; font-weight: 600;">
+                    ✅ <span class="highlight">All three are ready to install</span>. Use Settings → Skills → Upload to activate them.
+                </p>
+            </section>
+
+            <!-- Next Steps -->
+            <section id="next-steps">
+                <h2>9. Next Steps</h2>
+                <p>
+                    <strong>Week 1: Foundation</strong>
+                </p>
+                <ul class="category-list">
+                    <li>Install official Anthropic skills: <code>/plugin marketplace add anthropics/skills</code></li>
+                    <li>Install secondsky collection: <code>/plugin marketplace add https://github.com/secondsky/claude-skills</code></li>
+                    <li>Install your custom skills (modern-web-design, london-materials, london-garden-plan)</li>
+                    <li>Test each skill with sample prompts</li>
+                </ul>
+
+                <p style="margin-top: 20px;">
+                    <strong>Week 2–3: Evaluation</strong>
+                </p>
+                <ul class="category-list">
+                    <li>Browse VoltAgent and SkillsMP for domain-specific additions</li>
+                    <li>Evaluate 5–10 skills from your priority categories</li>
+                    <li>Document which skills are most useful for your workflow</li>
+                    <li>Create a custom "favorites" list</li>
+                </ul>
+
+                <p style="margin-top: 20px;">
+                    <strong>Ongoing: Maintenance</strong>
+                </p>
+                <ul class="category-list">
+                    <li>Update custom skills quarterly with new market data, pricing, or patterns</li>
+                    <li>Monitor official Anthropic releases for new tools</li>
+                    <li>Share your custom skills with team members for feedback</li>
+                    <li>Consider publishing to GitHub if they're reusable for others in construction/finance</li>
+                </ul>
+            </section>
+
+            <!-- CTA -->
+            <div class="cta-box">
+                <h3>Ready to Get Started?</h3>
+                <p>
+                    Download the full PDF guide below for offline reference, then visit SkillsMP or VoltAgent/awesome-agent-skills 
+                    to explore the full ecosystem. Start with your custom skills, then layer in official and community skills that match your stack.
+                </p>
+            </div>
+
+            <!-- Footer Section -->
+            <section style="text-align: center; margin-top: 40px;">
+                <p style="margin-bottom: 10px;">
+                    <strong>📥 Full PDF Guide Available for Download</strong>
+                </p>
+                <p style="margin-bottom: 20px; color: #666;">
+                    The comprehensive PDF includes all skills, detailed recommendations, installation steps, and safety guidelines.
+                </p>
+                <a href="Claude_Skills_Guide.pdf" class="pdf-download" download>
+                    📄 Download PDF Guide
+                </a>
+            </section>
+        </main>
+
+        <footer>
+            <p>
+                <strong>Claude Skills Guide</strong> | Generated for builders, developers, and finance professionals<br/>
+                Covers 800,000+ skills from official Anthropic, SkillsMP, VoltAgent, and community repositories<br/>
+                <br/>
+                Includes three custom skills: modern-web-design, london-materials, london-garden-plan<br/>
+                <br/>
+                For questions or updates, visit <a href="https://skillsmp.com" target="_blank">SkillsMP</a> 
+                or <a href="https://github.com/VoltAgent/awesome-agent-skills" target="_blank">VoltAgent/awesome-agent-skills</a><br/>
+                <br/>
+                © 2026 | Self-hosted HTML | No external dependencies
+            </p>
+        </footer>
+    </div>
+
+    <a href="#" class="scroll-to-top" id="scrollToTop">↑</a>
+
+    <script>
+        // Scroll to top button
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
